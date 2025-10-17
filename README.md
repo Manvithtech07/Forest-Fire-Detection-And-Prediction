@@ -37,7 +37,7 @@ This project is being developed as part of "my M.E first Semester project" under
 3.  **Data Sampling:**
     * Generate 10,000+ random points within the study area.
     * Extract the value of all 7 features *plus* the dNBR (target) value at each point.
-    * Save this as a single `training_data.csv` file.
+    * Save this as a single `dataset.csv` file.
 4.  **Machine Learning:**
     * Load the CSV into `pandas`.
     * Split the data into training and testing sets.
