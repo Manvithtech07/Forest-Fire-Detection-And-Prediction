@@ -15,15 +15,15 @@ This project is being developed as part of "my M.E first semester project" under
 
 ## 2. Objectives
 
-* Acquire Data: Download and organize all necessary data, including Landsat 8 (Pre- and Post-Fire) and SRTM (DEM) satellite imagery from the USGS.
-* Preprocess Geospatial Data: Develop a data pipeline using GeoPandas and Rasterio to clip all satellite images to the Naini Tal district boundary and apply a cloud mask to remove bad pixels.
-* Perform Feature Engineering: Calculate and create 7 key predictive features:
+* **Acquire Data:** Download and organize all necessary data, including Landsat 8 (Pre- and Post-Fire) and SRTM (DEM) satellite imagery from the USGS.
+* **Preprocess Geospatial Data:** Develop a data pipeline using GeoPandas and Rasterio to clip all satellite images to the Naini Tal district boundary and apply a cloud mask to remove bad pixels.
+* **Perform Feature Engineering:** Calculate and create 7 key predictive features:
    * Vegetation Indices: NDVI (pre/post), NBR (pre/post)
    * Topographical Indices: Elevation, Slope, Aspect
    * Ground Truth: dNBR (to identify burned vs. unburned areas for training).
-* Create a Balanced Dataset: Implement a stratified sampling method to generate a balanced 10,000-point training dataset (.csv) from the feature maps.
-* Train and Compare ML Models: Train and evaluate three different machine learning classifiers (Logistic Regression, SVM, and Random Forest) to find the most accurate model for this task.
-* Generate Final Prediction Map: Use the best-performing model to classify every pixel in the study area and generate a final, high-resolution burn scar map.
+* **Create a Balanced Dataset:** Implement a stratified sampling method to generate a balanced 10,000-point training dataset (.csv) from the feature maps.
+* **Train and Compare ML Models:** Train and evaluate three different machine learning classifiers (Logistic Regression, SVM, and Random Forest) to find the most accurate model for this task.
+* **Generate Final Prediction Map:** Use the best-performing model to classify every pixel in the study area and generate a final, high-resolution burn scar map.
 
 ## 3. Dataset
 
