@@ -11,7 +11,7 @@ This project is being developed as part of "my M.E first Semester project" under
 ## 2. Objectives
 
 * To acquire and preprocess Landsat 8/9 satellite imagery for the study area (Uttarakhand).
-* To calculate key spectral indices related to vegetation health and fire, such as **NBR** (Normalized Burn Ratio) and **dNBR** (delta Normalized Burn Ratio).
+* To calculate key spectral indices related to vegetation health and fire, such as **NBR** (Normalized Burn Ratio) and **dNBR** (delta Normalized Burn Ratio) and Environmental indices (Elevation,Slope,Ascept).
 * To identify areas that have been recently burned.
 * (Future Goal) To build a machine learning model to predict fire risk using various geospatial factors (e.g., land cover, slope, weather data).
 
