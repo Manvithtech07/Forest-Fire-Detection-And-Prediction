@@ -8,6 +8,11 @@ This project aims to build a machine learning models to **predict forest fire su
 
 This project is being developed as part of "my M.E first semester project" under the guidance of Dr. Arockiaraj S, Associate Professor, Manipal School of Information Sciences and Dr. Shweta Vincent, Associate Professor, Manipal Institute of Technology, Manipal.
 
+* **Notebook 01:** Data Preprocessing (Clipping, Cloud Masking)
+* **Notebook 02:** Feature Engineering (NDVI, NBR, dNBR, Slope, Aspect)
+* **Notebook 03:** Data Sampling (Stratified 10,000-point dataset)
+* **Notebook 04:** Modeling (98.45% Accuracy) & Final Map Generation
+
 ## 2. Objectives
 
 * To acquire and preprocess Landsat 8 satellite imagery (Pre- and Post-Fire).
@@ -27,22 +32,18 @@ This project is being developed as part of "my M.E first semester project" under
 * **Study Area:** Nainital District, Uttarakhand, India
 * **Event:** April 2021 Forest Fires
 
-## 4. Methodology & Workflow
+## 4. Methodology
 
-1.  **Data Preprocessing:**
-    * Clip all satellite (Landsat) and DEM data to the Nainital district boundary.
-    * Perform cloud masking on Landsat images using the `QA_PIXEL` band.
-2.  **Feature Engineering:**
-    * Calculate all 7 indices (NDVI, NBR, dNBR, Elevation, Slope, Aspect) and save them as new `.TIF` files.
-3.  **Data Sampling:**
-    * Generate 10,000+ random points within the study area.
-    * Extract the value of all 7 features *plus* the dNBR (target) value at each point.
-    * Save this as a single `dataset.csv` file.
-4.  **Machine Learning:**
-    * Load the CSV into `pandas`.
-    * Split the data into training and testing sets.
-    * Train a `Logistic regression`,`Random Forest Classifier`,`Support Vector Machine (SVM)` to predict `Burned (1)` or `Not Burned (0)`.
-    * Evaluate the model's accuracy.
+1.  **Data Acquisition:** Landsat 8 (Pre & Post-fire) and SRTM (DEM) data was downloaded from USGS EarthExplorer. A district shapefile was sourced for the study area.
+2.  **Preprocessing:** All raster images were clipped to the Naini Tal boundary. A cloud mask was applied to all Landsat bands using the `QA_PIXEL` file to remove clouds, shadows, and snow.
+3.  **Feature Engineering:** 8 core features were calculated and saved as new GeoTIFFs:
+    * `ndvi_pre`, `ndvi_post`
+    * `nbr_pre`, `nbr_post`
+    * `dNBR` (used as the "ground truth" for training)
+    * `elevation`, `slope`, `aspect`
+4.  **Data Sampling:** A **stratified sample** of 10,000 points (5,000 burned, 5,000 unburned) was generated to create a balanced training dataset (`training_data.csv`).
+5.  **Modeling:** A Random Forest Classifier was trained in Scikit-learn to predict the `Burned` class (1 or 0).
+6.  **Deployment:** The trained model was used to predict the class of *every* pixel in the study area, generating the final burn scar map.
 
 ## 5. Tools and Technologies
 
