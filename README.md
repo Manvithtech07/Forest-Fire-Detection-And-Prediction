@@ -1,4 +1,4 @@
-# Forest Fire Detection and Prediction using Satellite Imagery in Uttarakhand (Nainital Town)
+# Forest Fire Detection and Prediction using Satellite Imagery in Uttarakhand (Nainital District)
 
 **Project Status:** In Progress 
 
