@@ -15,14 +15,15 @@ This project is being developed as part of "my M.E first semester project" under
 
 ## 2. Objectives
 
-* To acquire and preprocess Landsat 8 satellite imagery (Pre- and Post-Fire).
-* To acquire and process a **Digital Elevation Model (DEM)** for environmental data.
-* To perform **Feature Engineering** by calculating:
-    * Vegetation Indices: **NDVI**, **NBR**
-    * Burn Index: **dNBR** (to identify *what* burned, for our training data)
-    * Environmental Indices: **Elevation**, **Slope**, and **Aspect**
-* To create a training dataset by sampling 10,000+ points from these data layers.
-* To train a **Logistic regression**, **Random Forest**, **Support Vector Machine (SVM)** model to predict fire risk based on these features.
+* Acquire Data: Download and organize all necessary data, including Landsat 8 (Pre- and Post-Fire) and SRTM (DEM) satellite imagery from the USGS.
+* Preprocess Geospatial Data: Develop a data pipeline using GeoPandas and Rasterio to clip all satellite images to the Naini Tal district boundary and apply a cloud mask to remove bad pixels.
+* Perform Feature Engineering: Calculate and create 7 key predictive features:
+   * Vegetation Indices: NDVI (pre/post), NBR (pre/post)
+   * Topographical Indices: Elevation, Slope, Aspect
+   * Ground Truth: dNBR (to identify burned vs. unburned areas for training).
+* Create a Balanced Dataset: Implement a stratified sampling method to generate a balanced 10,000-point training dataset (.csv) from the feature maps.
+* Train and Compare ML Models: Train and evaluate three different machine learning classifiers (Logistic Regression, SVM, and Random Forest) to find the most accurate model for this task.
+* Generate Final Prediction Map: Use the best-performing model to classify every pixel in the study area and generate a final, high-resolution burn scar map.
 
 ## 3. Dataset
 
@@ -32,18 +33,19 @@ This project is being developed as part of "my M.E first semester project" under
 * **Study Area:** Nainital District, Uttarakhand, India
 * **Event:** April 2021 Forest Fires
 
-## 4. Methodology
+## 4. Project Workflow & Methodology
 
-1.  **Data Acquisition:** Landsat 8 (Pre & Post-fire) and SRTM (DEM) data was downloaded from USGS EarthExplorer. A district shapefile was sourced for the study area.
-2.  **Preprocessing:** All raster images were clipped to the Naini Tal boundary. A cloud mask was applied to all Landsat bands using the `QA_PIXEL` file to remove clouds, shadows, and snow.
-3.  **Feature Engineering:** 8 core features were calculated and saved as new GeoTIFFs:
-    * `ndvi_pre`, `ndvi_post`
-    * `nbr_pre`, `nbr_post`
-    * `dNBR` (used as the "ground truth" for training)
-    * `elevation`, `slope`, `aspect`
-4.  **Data Sampling:** A **stratified sample** of 10,000 points (5,000 burned, 5,000 unburned) was generated to create a balanced training dataset (`training_data.csv`).
-5.  **Modeling:** A Random Forest Classifier was trained in Scikit-learn to predict the `Burned` class (1 or 0).
-6.  **Deployment:** The trained model was used to predict the class of *every* pixel in the study area, generating the final burn scar map.
+This project was built in a 4-notebook pipeline:
+
+* **Acquire Data:** Download and organize all necessary data, including Landsat 8 (Pre- and Post-Fire) and SRTM (DEM) satellite imagery from the USGS.
+* **Preprocess Geospatial Data:** Develop a data pipeline using **GeoPandas** and **Rasterio** to clip all satellite images to the Naini Tal district boundary and apply a cloud mask to remove bad pixels.
+* **Perform Feature Engineering:** Calculate and create 7 key predictive features:
+    * **Vegetation Indices:** `NDVI (pre/post)`, `NBR (pre/post)`
+    * **Topographical Indices:** `Elevation`, `Slope`, `Aspect`
+    * **Ground Truth:** `dNBR` (to identify burned vs. unburned areas for training).
+* **Create a Balanced Dataset:** Implement a **stratified sampling** method to generate a balanced 10,000-point training dataset (`.csv`) from the feature maps.
+* **Train and Compare ML Models:** Train and evaluate three different machine learning classifiers (**Logistic Regression**, **SVM**, and **Random Forest**) to find the most accurate model for this task.
+* **Generate Final Prediction Map:** Use the best-performing model (Random Forest) to classify every pixel in the study area and generate a final, high-resolution burn scar map.
 
 ## 5. Tools and Technologies
 
