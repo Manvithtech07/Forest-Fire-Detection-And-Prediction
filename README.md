@@ -4,9 +4,9 @@
 
 ## 1. Project Overview
 
-This project aims to detect and predict forest fire-prone areas in the Uttarakhand region of India. By leveraging satellite remote sensing data, this analysis will help in identifying vulnerable zones, enabling better resource allocation and proactive fire management strategies.
+This project aims to build a machine learning models to **predict forest fire susceptibility** in the Nainital district of Uttarakhand, India. By analyzing satellite imagery and environmental data, we can identify which areas are most at risk, helping to create a "Fire Risk Map."
 
-This project is being developed as part of "my M.E first Semester project" under the guidance of Dr. Arockiaraj S, Associate Professor, Manipal School of Information Sciences and Dr. Shweta Vincent, Associate Professor, Manipal Institute of Technology, Manipal.
+This project is being developed as part of "my M.E first semester project" under the guidance of Dr. Arockiaraj S, Associate Professor, Manipal School of Information Sciences and Dr. Shweta Vincent, Associate Professor, Manipal Institute of Technology, Manipal.
 
 ## 2. Objectives
 
@@ -17,7 +17,7 @@ This project is being developed as part of "my M.E first Semester project" under
     * Burn Index: **dNBR** (to identify *what* burned, for our training data)
     * Environmental Indices: **Elevation**, **Slope**, and **Aspect**
 * To create a training dataset by sampling 10,000+ points from these data layers.
-* To train a **Logistic regression**,**Random Forest**,**Support Vector Machine (SVM)** model to predict fire risk based on these features.
+* To train a **Logistic regression**, **Random Forest**, **Support Vector Machine (SVM)** model to predict fire risk based on these features.
 
 ## 3. Dataset
 
@@ -61,6 +61,3 @@ This project is being developed as part of "my M.E first Semester project" under
 
 *(This section will be filled in later)*
 
-1.  Clone the repository: `git clone https://github.com/Your-Username/Forest-Fire-Detection.git`
-2.  Install the required libraries: `pip install -r requirements.txt`
-3.  Run the main analysis notebook: `notebooks/01-Data-Preprocessing.ipynb`
