@@ -6,7 +6,7 @@
 
 This project aims to build a machine learning models to **predict forest fire susceptibility** in the Nainital district of Uttarakhand, India. By analyzing satellite imagery and environmental data, we can identify which areas are most at risk, helping to create a "Fire Risk Map."
 
-This project is being developed as part of "my M.E first Semester project" under the guidance of Dr. Arockiaraj S, Associate Professor, Manipal School of Information Sciences and Dr. Shweta Vincent, Associate Professor, Manipal Institute of Technology, Manipal.
+This project is being developed as part of "my M.E first semester project" under the guidance of Dr. Arockiaraj S, Associate Professor, Manipal School of Information Sciences and Dr. Shweta Vincent, Associate Professor, Manipal Institute of Technology, Manipal.
 
 ## 2. Objectives
 
