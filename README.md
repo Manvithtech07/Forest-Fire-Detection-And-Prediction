@@ -4,7 +4,7 @@
 
 ## 1. Project Overview
 
-This project aims to detect and predict forest fire-prone areas in the Uttarakhand region of India. By leveraging satellite remote sensing data, this analysis will help in identifying vulnerable zones, enabling better resource allocation and proactive fire management strategies.
+This project aims to build a machine learning models to **predict forest fire susceptibility** in the Nainital district of Uttarakhand, India. By analyzing satellite imagery and environmental data, we can identify which areas are most at risk, helping to create a "Fire Risk Map."
 
 This project is being developed as part of "my M.E first Semester project" under the guidance of Dr. Arockiaraj S, Associate Professor, Manipal School of Information Sciences and Dr. Shweta Vincent, Associate Professor, Manipal Institute of Technology, Manipal.
 
