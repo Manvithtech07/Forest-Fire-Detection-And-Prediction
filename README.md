@@ -13,19 +13,7 @@ This project is being developed as part of "my M.E first semester project" under
 * **Notebook 03:** Data Sampling (Stratified 10,000-point dataset)
 * **Notebook 04:** Modeling (98.45% Accuracy) & Final Map Generation
 
-## 2. Objectives
-
-* **Acquire Data:** Download and organize all necessary data, including Landsat 8 (Pre- and Post-Fire) and SRTM (DEM) satellite imagery from the USGS.
-* **Preprocess Geospatial Data:** Develop a data pipeline using GeoPandas and Rasterio to clip all satellite images to the Naini Tal district boundary and apply a cloud mask to remove bad pixels.
-* **Perform Feature Engineering:** Calculate and create 7 key predictive features:
-   * Vegetation Indices: NDVI (pre/post), NBR (pre/post)
-   * Topographical Indices: Elevation, Slope, Aspect
-   * Ground Truth: dNBR (to identify burned vs. unburned areas for training).
-* **Create a Balanced Dataset:** Implement a stratified sampling method to generate a balanced 10,000-point training dataset (.csv) from the feature maps.
-* **Train and Compare ML Models:** Train and evaluate three different machine learning classifiers (Logistic Regression, SVM, and Random Forest) to find the most accurate model for this task.
-* **Generate Final Prediction Map:** Use the best-performing model to classify every pixel in the study area and generate a final, high-resolution burn scar map.
-
-## 3. Dataset
+## 2. Dataset
 
 * **Data Source:** USGS EarthExplorer
 * **Satellite:** Landsat 8 (Collection 2, Level 2)
@@ -33,7 +21,7 @@ This project is being developed as part of "my M.E first semester project" under
 * **Study Area:** Nainital District, Uttarakhand, India
 * **Event:** April 2021 Forest Fires
 
-## 4. Project Workflow & Methodology
+## 3. Project Workflow & Methodology
 
 This project was built in a 4-notebook pipeline:
 
@@ -47,7 +35,7 @@ This project was built in a 4-notebook pipeline:
 * **Train and Compare ML Models:** Train and evaluate three different machine learning classifiers (**Logistic Regression**, **SVM**, and **Random Forest**) to find the most accurate model for this task.
 * **Generate Final Prediction Map:** Use the best-performing model (Random Forest) to classify every pixel in the study area and generate a final, high-resolution burn scar map.
 
-## 5. Tools and Technologies
+## 4. Tools and Technologies
 
 * **Programming Language:** Python
 * **Libraries:**
@@ -60,7 +48,7 @@ This project was built in a 4-notebook pipeline:
     * QGIS and ArcGIS (for visualization)
     * Git & GitHub
 
-## 6. How to Run This Project
+## 5. How to Run This Project
 
 *(This section will be filled in later)*
 
