@@ -61,6 +61,3 @@ This project is being developed as part of "my M.E first Semester project" under
 
 *(This section will be filled in later)*
 
-1.  Clone the repository: `git clone https://github.com/Your-Username/Forest-Fire-Detection.git`
-2.  Install the required libraries: `pip install -r requirements.txt`
-3.  Run the main analysis notebook: `notebooks/01-Data-Preprocessing.ipynb`
