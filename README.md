@@ -35,7 +35,7 @@ This project was built in a 4-notebook pipeline:
 * **Train and Compare ML Models:** Train and evaluate three different machine learning classifiers (**Logistic Regression**, **SVM**, and **Random Forest**) to find the most accurate model for this task.
 * **Generate Final Prediction Map:** Use the best-performing model (Random Forest) to classify every pixel in the study area and generate a final, high-resolution burn scar map.
 * Final Burn Scar Map (Baseline - Google Satellite)
-* <img width="1540" height="719" alt="Screenshot 2025-11-13 204409" src="https://github.com/user-attachments/assets/7077cd69-551d-4e76-902e-acb57671b816" />
+<img width="1540" height="719" alt="Screenshot 2025-11-13 204409" src="https://github.com/user-attachments/assets/7077cd69-551d-4e76-902e-acb57671b816" />
 
 
 ## 4. Tools and Technologies
